@@ -3,6 +3,9 @@
 
 import random
 
+def flip():
+    return "Krona" if random.randint(0, 1) == 0 else "Klave"
+
 try:
     count = int(input("Hur många gånger vill du singla slant? "))
     if count < 1:
@@ -13,8 +16,4 @@ except ValueError:
     exit()
 
 for _ in range(count):
-    flip = random.randint(0, 1)
-    if flip == 0:
-        print("Krona")
-    else:
-        print("Klave")
+    print(flip())
